@@ -23,6 +23,11 @@ export const Navbar = () => {
               contact us
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/login">
+              login
+            </NavLink>
+          </li>
         </ul>
       </div>
     </nav>

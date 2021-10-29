@@ -4,7 +4,8 @@ import { Posts } from "./pages/Posts";
 import { UserDetails } from "./pages/UserDetails";
 import { Users } from "./pages/Users";
 import { Contact } from "./pages/Contact";
-
+import { Login } from "./pages/Login";
+import { ProtectedRoute } from "./components/ProtectedRoute";
 export const App = () => {
   return (
     <>
@@ -17,11 +18,14 @@ export const App = () => {
           <Route path="/users/:id">
             <UserDetails />
           </Route>
-          <Route path="/users">
+          <ProtectedRoute path="/users">
             <Users />
-          </Route>
+          </ProtectedRoute>
           <Route path="/contact">
             <Contact />
+          </Route>
+          <Route path="/login">
+             <Login />
           </Route>
           <Route path="/">
             <Redirect to="/posts" />
